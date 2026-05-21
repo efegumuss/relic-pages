@@ -1197,6 +1197,34 @@
         ctaInner.classList.add('reveal');
         observer.observe(ctaInner);
       }
+
+      // Section headers ("How it works", "Stats")
+      document.querySelectorAll('.section-header').forEach(function (el) {
+        el.classList.add('reveal');
+        observer.observe(el);
+      });
+
+      // Stats lede + headline — stagger before the grid
+      document.querySelectorAll('.stats-lede, .stats-headline').forEach(function (el, i) {
+        el.classList.add('reveal');
+        el.style.setProperty('--reveal-delay', (i * 130) + 'ms');
+        observer.observe(el);
+      });
+
+      // Stat cells — stagger behind the headline
+      document.querySelectorAll('.stat').forEach(function (el, i) {
+        el.classList.add('reveal');
+        el.style.setProperty('--reveal-delay', (260 + i * 100) + 'ms');
+        observer.observe(el);
+      });
+
+      // Series card — offset slightly so content column leads
+      var seriesCard = document.querySelector('.series-card');
+      if (seriesCard) {
+        seriesCard.classList.add('reveal');
+        seriesCard.style.setProperty('--reveal-delay', '90ms');
+        observer.observe(seriesCard);
+      }
     }
 
     /* ── Stats count-up ──────────────────────────────────────────── */
