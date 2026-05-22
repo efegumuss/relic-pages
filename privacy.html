@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Relic AI</title>
+  <meta name="description" content="Relic AI privacy policy. What we collect, how we use it, and your rights.">
+  <meta name="theme-color" content="#0A0A0F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;500;600&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0A0A0F;
+      --bg-card:     #12121A;
+      --bg-deep:     #08080D;
+      --gold:        #C9A84C;
+      --gold-dim:    rgba(201,168,76,0.55);
+      --gold-border: rgba(201,168,76,0.22);
+      --text:        #F0EBE0;
+      --subtext:     rgba(240,235,224,0.52);
+      --divider:     rgba(255,255,255,0.055);
+      --serif:       'Playfair Display', Georgia, 'Times New Roman', serif;
+      --sans:        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 0;
+      animation: page-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+    }
+
+    @keyframes page-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; opacity: 1; }
+    }
+
+    /* ─── Nav ───────────────────────────────────────────────────── */
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 36px;
+      background: rgba(10,10,15,0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .nav-logo .rune { font-size: 9px; opacity: 0.75; margin: 0 4px; vertical-align: middle; }
+
+    .nav-back {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--subtext);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+      min-height: 44px;
+    }
+
+    .nav-back:hover { color: var(--text); }
+    .nav-back::before { content: '←'; font-size: 14px; }
+
+    .nav-logo:focus-visible,
+    .nav-back:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ─── Skip link ─────────────────────────────────────────────── */
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--gold);
+      color: #0A0A0F;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 0 0 8px 8px;
+      text-decoration: none;
+      z-index: 200;
+      white-space: nowrap;
+      transition: top 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skip-link:focus-visible { top: 0; }
+
+    /* ─── Page layout ───────────────────────────────────────────── */
+
+    main {
+      padding: 120px 36px 100px;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ─── Header ────────────────────────────────────────────────── */
+
+    .page-eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .page-meta {
+      font-size: 13px;
+      color: var(--subtext);
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    /* ─── Body content ──────────────────────────────────────────── */
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 48px 0 16px;
+      padding-top: 8px;
+    }
+
+    .content h2:first-of-type { margin-top: 0; }
+
+    .content p {
+      font-size: 15px;
+      color: var(--subtext);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .content p:last-child { margin-bottom: 0; }
+
+    .content ul, .content ol {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .content li {
+      font-size: 15px;
+      color: var(--subtext);
+      line-height: 1.75;
+      padding: 4px 0 4px 22px;
+      position: relative;
+    }
+
+    .content li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      font-size: 9px;
+      color: var(--gold);
+    }
+
+    .content li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .content a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .content a:hover { border-color: var(--gold); }
+    .content a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ─── Table ─────────────────────────────────────────────────── */
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 24px;
+      font-size: 14px;
+    }
+
+    .content th {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      padding: 10px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--gold-border);
+    }
+
+    .content td {
+      padding: 13px 16px;
+      color: var(--subtext);
+      border-bottom: 1px solid var(--divider);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .content td:first-child { color: var(--text); font-weight: 500; }
+
+    .content tr:last-child td { border-bottom: none; }
+
+    /* ─── Section rule ──────────────────────────────────────────── */
+
+    .content hr {
+      border: none;
+      border-top: 1px solid var(--divider);
+      margin: 40px 0;
+    }
+
+    /* ─── Footer ────────────────────────────────────────────────── */
+
+    footer {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--divider);
+      padding: 36px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      opacity: 0.75;
+    }
+
+    .footer-links { display: flex; gap: 24px; align-items: center; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--subtext);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+    .footer-links a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .footer-copy { font-size: 12px; color: rgba(240,235,224,0.25); }
+
+    /* ─── Responsive ────────────────────────────────────────────── */
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      main { padding: 100px 20px 80px; }
+      footer { padding: 28px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 20px; }
+      .footer-links { justify-content: center; }
+      .footer-links a { padding: 11px 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .content table { font-size: 13px; }
+      .content th, .content td { padding: 10px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav>
+    <a href="/" class="nav-logo">RELIC <span class="rune">✦</span> AI</a>
+    <a href="/" class="nav-back">Back to home</a>
+  </nav>
+
+  <main id="main-content">
+    <div class="content">
+
+      <span class="page-eyebrow">Legal</span>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-meta">Last updated: May 2026</p>
+
+      <p>Relic AI ("we", "us") is an iOS application operated by Efe Gumus.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>Account identifier</strong> — your Apple user ID (or private relay email) created when you sign in with Apple. We never see your real name unless you choose to provide it.</li>
+        <li><strong>Generated content</strong> — the videos you create and the story prompts used to generate them.</li>
+        <li><strong>Credit balance</strong> — your current credit balance and transaction history (top-ups and deductions).</li>
+        <li><strong>Device metadata</strong> — device type and OS version, collected only for crash diagnosis.</li>
+      </ul>
+
+      <h2>What we do not collect</h2>
+      <p>We do not collect your contacts, location, browsing history, microphone or camera input, or any data unrelated to operating the service.</p>
+
+      <h2>How we use your data</h2>
+      <p>Your data is used solely to:</p>
+      <ul>
+        <li>Authenticate your account</li>
+        <li>Process video generation jobs</li>
+        <li>Maintain and display your credit balance</li>
+        <li>Store and retrieve your generated videos</li>
+      </ul>
+      <p>We do not sell your data, share it with advertisers, or use it to train AI models.</p>
+
+      <h2>Third-party services</h2>
+      <p>Relic AI uses the following services, each governed by their own privacy policy:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Privacy policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Authentication and video storage</td>
+            <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>RevenueCat</td>
+            <td>In-app purchase management</td>
+            <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Apple</td>
+            <td>Sign In with Apple, App Store payments</td>
+            <td><a href="https://www.apple.com/privacy" target="_blank" rel="noopener">apple.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Modal</td>
+            <td>Video generation compute</td>
+            <td><a href="https://modal.com/privacy" target="_blank" rel="noopener">modal.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Data retention</h2>
+      <p>Your account data is retained while your account is active. Generated videos are stored for 30 days via signed URLs; locally downloaded videos remain on your device until you delete them.</p>
+
+      <h2>Your rights</h2>
+      <p>You may request deletion of your account and all associated data at any time by emailing <a href="mailto:support@relicai.app">support@relicai.app</a>. We will process deletion requests within 30 days.</p>
+
+      <h2>Children</h2>
+      <p>Relic AI is not directed at children under 13 and we do not knowingly collect data from children under 13.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time. The date at the top of this page reflects the most recent revision. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:support@relicai.app">support@relicai.app</a>.</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">RELIC ✦ AI</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <span class="footer-copy">© 2026 Relic AI. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
